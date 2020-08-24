@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOC IDŐKÉP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon"
+        href="https://scontent.fqpj1-1.fna.fbcdn.net/v/t1.0-9/91378103_2962541363863825_1238559222594011136_n.png?_nc_cat=108&_nc_sid=09cbfe&_nc_ohc=82q0h-P6kHgAX-YK2dZ&_nc_ht=scontent.fqpj1-1.fna&oh=2a73fc56059edadc41ea597cc56c9064&oe=5F5F025D" />
+
+
+
+</head>
+
+<body class="eupopup eupopup-bottomright" bgcolor="#ffffff">
+
+
+    <div class="myheader"></div>
+    <nav class=" mynavbar navbar navbar-expand-lg navbar-dark bg-dark background: rgba(0,0,0,0.3) !important;
+        color: white;">
+        <a class="navbar-brand" href="#"><img src="img/ah_logo.png" width="50" height="50" style="float: right" alt="AH"
+                title="AH"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Időkép <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+
+                <!-- weather widget start --><a target="_blank" href="https://www.booked.hu/weather/budapest-18069"><img
+                        src="https://w.bookcdn.com/weather/picture/12_18069_1_14_2071c9_118_2071c9_ffffff_ffffff_0_2071c9_ffffff_0_6.png?scode=124&domid=462&anc_id=23435"
+                        alt="booked.net" /></a><!-- weather widget end -->
+
+            </form>
+        </div>
+    </nav>
+    </div>
+
+    <table border="0" cellpadding="10" width="100%" height="100%">
+        <tr>
+            <td rowspan="2">
+                <div class="content">
+                    <div class="left">
+                        <div class="main-hl nmb">
+                        </div>
+
+                        <iframe
+                            src="//met.hu/idojaras/aktualis_idojaras/oras_terkepek/main.php?frm=1&ful=radar&fulmenu=aktualis_idojaras/oras_terkepek#aktp"
+                            width="640" align="top" frameborder="0" name="radar" id="radar" scrolling="no"
+                            allowtransparency="true" allowfullscreen="true" style="height: 648px;">
+
+
+                        </iframe>
+            </td>
+            <td>
+                <div class="content">
+                    <div class="top">
+                        <div class="main-hl nmb"></div>
+
+                    </div>
+                    <div id="omszradarv" class="nagy_terkep player">
+                        <video width="600" muted autoplay loop controls preload="none" poster="/radar/radar_poster.jpg"
+                            class="video">
+                            <source type="video/mp4" src="https://www.idokep.hu/radar/radar.mp4">
+                            <img src="/radar/radar_poster.jpg">
+                        </video>
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="left"><img src="//www.idokep.hu/kistersegi/riaszt_1-3_transp.png?1597339311" width="310"
+                    height="221" title="1-3 órás riasztás" class="loading" data-was-processed="true">
+                    <img src="//www.idokep.hu/kistersegi/riaszt_24_transp.png?1597339311" width="310"
+                    height="221" title="Mára szóló figyelmeztetés" class="loading" data-was-processed="true">
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        window.setInterval('refresh()', 300000); // A FÜGGVÉNY HÍVÁSA MINDEN 300000 EZREDMÁSODPERCBEN AZAZ 5x60 MÁSODPERCBEN (5PERC).
+        // AZ OLDAL FRISSÍTÉSE, ÚJRATÖLTÉSE
+        function refresh() {
+            window.location.reload();
+        }
+
+    </script>
+
+</body>
+
+</html>
